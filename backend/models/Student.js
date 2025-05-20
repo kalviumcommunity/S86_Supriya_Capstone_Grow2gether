@@ -5,21 +5,24 @@ const studentSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+
   email: {
     type: String,
     required: true,
     unique: true,
   },
 
+
   profilePicture: {
     type: String,
-    default: '', 
+    default: "", 
   },
 
   skills: {
     type: [String], 
     default: [],
   },
+
   projects: {
     type: [String], 
     default: [],
@@ -28,17 +31,19 @@ const studentSchema = new mongoose.Schema({
   oneLineStatus: {
     type: String,
     maxlength: 100,
-    default: '', 
+    default: "", 
   },
+
   mood: {
     type: String,
     enum: ['😊', '😐', '😴', '😔', '😡', '🤯', '😁'],
     default: '😊',
   },
+  
   miniGoal: {
     type: String,
     maxlength: 150,
-    default: '', 
+    default: "", 
   },
 
   favorites: {
