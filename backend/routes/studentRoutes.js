@@ -23,4 +23,21 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// POST a new student
+router.post('/', async (req, res) => {
+  try {
+    const { name, email, course } = req.body;
+
+    if (!name || !email || !course) {
+      return res.status(400).json({ message: 'All fields are required' });
+    }
+
+    const newStudent = new Student({ name, email, course });
+    const savedStudent = await newStudent.save();
+    res.status(201).json(savedStudent);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 module.exports = router;
