@@ -11,6 +11,10 @@ app.use(express.json());
 // Connect to MongoDB
 connectDB();
 
+app.get('/', (req, res) => {
+    res.send("Grow2gether Backend API Server Running Successfully!")
+})
+
 // Routes
 app.use('/api/students', studentRoutes);
 
