@@ -1,0 +1,35 @@
+# 🔹 Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 🔹 Dependency & build folders
+node_modules/
+dist/
+dist-ssr/
+
+# 🔹 Local env/settings
+*.local
+.env
+.env.*.local
+
+# 🔹 OS and editor junk
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 🔹 Ignore everything OUTSIDE this folder
+../*
+
+# OPTIONAL: keep only your project folders tracked
+!S86_Supriya_Capstone_Grow2gether/
